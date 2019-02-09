@@ -69,7 +69,7 @@
     if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $email = filter_var($email, FILTER_VALIDATE_EMAIL);
       //Check if email already exists 
-      $e_check = mysqli_query($con, "SELECT email_address FROM users WHERE email='$email'");
+      $e_check = mysqli_query($con, "SELECT email_address FROM users WHERE email_address = '$email'");
       //Count the number of rows returned
       $num_rows = mysqli_num_rows($e_check);
       if($num_rows > 0) {
@@ -175,7 +175,7 @@
 
       $confirm_code = getRandomString(255);
 
-      $add_new_user_query = "INSERT INTO users VALUES ('', '" . $username . "', '" . $hash_pass . "', '" . $f_name . "', '" . $l_name . "', '" . $email . "', 'new_user.jpg', '" . $datetime_joined . "', '" . $datetime_joined . "', 'no', '-', '" . $school_domain . "', '-', '-', '-1', '-', '-', '-', '-', '," . $f_name . "," . $l_name . ",', 'no', '" . $confirm_code . "')";
+      $add_new_user_query = "INSERT INTO users VALUES ('', '" . $username . "', '" . $hash_pass . "', '" . $f_name . "', '" . $l_name . "', '" . $email . "', 'new_user.jpg', '" . $datetime_joined . "', '" . $datetime_joined . "', 'no', '-', '" . $school_domain . "', '-', '-', '-', '-', '-', '-', '-', '," . strtolower($f_name) . "," . strtolower($l_name) . ",', 'no', '" . $confirm_code . "')";
 
       $add_new_user_query = str_replace('"', '\"', $add_new_user_query);
 
@@ -279,7 +279,7 @@
                             </section>
                             
                         </div>
-                        <a href="#one" class="more scrolly">Learn More</a>
+                        <a class="more scrolly">Learn More</a>
                     </section>
 
                 <!-- Footer -->

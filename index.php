@@ -35,7 +35,7 @@
 								<li><a href="register.php" class="button fit">Create Account</a></li>
 							</ul>
 						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
+						<a class="more scrolly">Learn More</a>
 					</section>
 
 				<!-- Footer -->
