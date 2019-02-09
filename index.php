@@ -22,8 +22,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">WORK WELL</a></h1>
-						
+						<h1><a href="index.php">WORK WELL</a></h1>
 					</header>
 
 				<!-- Banner -->
@@ -35,7 +34,7 @@
 							crafted @ Tartan Hacks 2019 </p>
 							<ul class="actions stacked">
 								<li><a href="login.php" class="button fit primary">Log In</a></li>
-								<li><a href="login.php?preset=register" class="button fit">Create Account</a></li>
+								<li><a href="register.php" class="button fit">Create Account</a></li>
 							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>

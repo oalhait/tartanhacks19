@@ -144,5 +144,13 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
 
+            <script type="text/javascript">
+                <?php
+                  if(isset($_GET['alert'])){
+                    echo "alert('" . $_GET['alert'] . "');";
+                  }
+                ?>
+            </script>
+
     </body>
 </html>

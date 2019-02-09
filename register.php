@@ -80,6 +80,11 @@
       $allowed = "no";
       $e_errors .= "Invalid e-mail address format<br>";
     }
+
+    if(substr($email, -4) != ".edu") {
+        $allowed = "no";
+        $e_errors .= "This is not an academic e-mail address<br>";
+    }
     
     $fn_length = strlen($f_name);
     if($fn_length < 2){
@@ -252,6 +257,7 @@
                                             <div class="col-8 col-12-xsmall">
                                                 <input type="password" name="pword" id="password" placeholder="Password" />
                                             </div>
+                                            <p></p>
                                             <div class="col-2 col-0-xsmall"></div>
                                         </div>
                                         <div class="row gtr-uniform">
