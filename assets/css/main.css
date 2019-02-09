@@ -1843,6 +1843,8 @@ input, select, textarea {
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
+		width: 62.5%;
+		margin: 0 auto;
 	}
 
 		input[type="text"]:invalid,
