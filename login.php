@@ -226,7 +226,7 @@
 <html>
 <head>
   <title>
-    theResearchApp | Login
+    WorkWell | Login
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -338,7 +338,7 @@
       }
     }
   </style>
-  <link rel = "icon" type = "image/png" href = "preston.png" />
+  <link rel="icon" type="image/png" href="logo.png" />
 </head>
 
 <body style="margin: 0; font-family: orkney;">

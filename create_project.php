@@ -16,22 +16,27 @@
 		$p_n = $_POST['project_name'];
 		$p_s = $_POST['project_summary'];
 
+		$p_n = str_replace("'", "\'", $p_n);
+		$p_s = str_replace("'", "\'", $p_s);
+
 		$datetime_added = date('Y-m-d H:i:s');
 
+		$first_tags = generate_tags($p_n . " " . $p_s);
+
 		//add the producer to database
-		$add_item_query = "INSERT INTO projects VALUES ('', '" . $id_name . "', '" . $proper_name . "', '" . $producer . "', '" . $category . "', '" . $target_file_86 . "', '" . $description_1 . "', '" . $target_file_desc . "', '" . $description_2 . "', '" . $specs . "', '0', '" . $review_source . "', '" . $review_yt_link . "', '" . $review_quote . "', '" . $tags . "', '" . $datetime_added . "', 'no', 'no')";
+		$add_item_query = "INSERT INTO projects VALUES ('', '" . $p_n . "', '" . $user_id . "', '," . $user_id . ",', '" . $p_s . "', ',', ',', '" . $first_tags . "', 'new_project.png', '-', '-', '0.0', 'no', '" . $datetime_added . "', 'no')";
 
 		$add_item_query = str_replace('"', '\"', $add_item_query);
 
 		$add_item_now  = mysqli_query($con, $add_item_query);
 
-		$items_all = mysqli_query($con, "SELECT * FROM items WHERE id_name = '$id_name'");
+		$user_id = $user_array['id'];
+
+		$items_all = mysqli_query($con, "SELECT * FROM projects WHERE project_name = '$p_n' AND project_manager = '$user_id' AND created_datetime = '$datetime_added'");
 	    $item_array = mysqli_fetch_array($items_all);
 	    $item_id = $item_array['id'];
 
-	    letTheBossKnow($user_array['f_name'] . " " . $user_array['l_name'], "added", "Item under " . strtoupper($category), $og_proper_name, "item.php?tit=" . $og_proper_name . "&id=" . $item_id);
-
-		header("Location: item.php?tit=" . $proper_name . "&id=" . $item_id);
+		header("Location: project.php?tit=" . $p_n . "&id=" . $item_id);
 		exit();
 	}
 
