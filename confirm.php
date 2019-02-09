@@ -72,29 +72,28 @@ catch(Exception $e) {
 <html>
 <head>
   <link rel = "stylesheet" type = "text/css" href = "style.css" />
+  <link rel = "stylesheet" type = "text/css" href = "main.css" />
   <style>
     @font-face {
       font-family: optimal;
       src: url(avnext.otf); /* Safari, Android, iOS */
     }
   </style>
-  <title>
-    Aleegence | Confirm Acoount
-  </title>
-  <link rel = "icon" type = "image/png" href = "n_logo.png" />
+  <title>WorkWell</title>
+  <!-- <link rel = "icon" type = "image/png" href = "n_logo.png" /> -->
   <meta name="screen" content="width=device-width">
 </head>
 
 <body style="margin: 0; font-family: orkney; background-color: #333; width: 100%; height: 100%; padding: 0;">
   <div class="topnav" id="myTopnav" style="margin: 0; position: fixed; top: 0;">
-    <a class="active" style="font-family: optimal; font-size: 30px; padding-left: 250px; color: white;"><img src="n_logo.png" height=50px width=56px style="position: absolute; top: 7px; left: 10px;"> <div style="position: absolute; top: 14px; left: 77px;"><b>aleegence</b></div></a>
+    <a class="active" style="font-family: optimal; font-size: 30px; padding-left: 250px; color: white;"><div style="position: absolute"><h1 style="margin-top:-30px; font-family: 'Open Sans'">WorkWell</h1></div></a>
   </div>
   <div id="fancy_stripe"></div>
   <div id="not_fancy_stripe"></div>
   <hr style="margin-top: 80px; margin-bottom: 50px;">
   <div style="margin-left: 40px;"><bolden style="font-size: 30px; color: white;">
   <?php
-    echo $bodyHTML . "<p></p><a style='text-decoration: none; color: #0077ff;' href='" . $linkURL . "'>" . $linkTEXT . "</a>";
+    echo $bodyHTML . "<p></p><a style='text-decoration: none; color: #0077ff; font-family: "Open Sans"' href='" . $linkURL . "'>" . $linkTEXT . "</a>";
   ?></bolden></div>
 </body>
 </html>

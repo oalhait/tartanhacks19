@@ -3454,9 +3454,9 @@ input, select, textarea {
 
 /* Style the search box inside the navigation bar */
 	.topSearch {
-	  width: 85%;
+	  width: 80% !important;
 	  float: left;
-	  margin-top: 10px;
+	  margin-top: 7px !important;
 	  font-size: 12px;
 	  text-align: center;
 	}
