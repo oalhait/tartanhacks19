@@ -2851,7 +2851,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #21b2a6;
+					background: rgb(237, 93, 77);
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
