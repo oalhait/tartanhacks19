@@ -23,19 +23,11 @@
                         
                         <nav id="nav">
                             <ul>
-                                <li class="special">
-                                            <div class="navbar">
-                                              <div class="dropdown">
-                                                <button class="dropbtn">Dropdown 
-                                                  <i class="fa fa-caret-down"></i>
-                                                </button>
-                                                <div class="dropdown-content">
-                                                  <a href="#">Link 1</a>
-                                                  <a href="#">Link 2</a>
-                                                  <a href="#">Link 3</a>
-                                                </div>
-                                              </div> 
-                                            </div>
+                                <div class="icon-bar">
+                                  <a href="editProfile.html"><i class="fa fa-user-circle-o"></i></a>
+                                  <a href="myProjects.html"><i class="fa fa-map-o"></i></a> 
+                                 
+                                      </div> 
         
                                     </div>
                                 </li>
@@ -48,30 +40,28 @@
                     <article id="main">
                         <section class="wrapper style5">
                             <div class="inner">
-                                <h3>Profile</h3>
+                                
                                 <div class="row gtr-uniform">
                                     <!-- user info -->
                                     <div class="col-8 col-12-xsmall">
-                                        <div class="row gtr-uniform">
-                                            <div class="col-2">
-                                                <img src="images/pic04.jpg" alt="profile" width="100%">
-                                            </div>
-                                            <div class="col-10">
-                                                <h2 vertical-align="middle">username</h2>
-                                            </div>
-                                        </div>
-                                        <div id="userinfo">
-                                            <p> <b>Major</b> major </p>
-                                            <p> <b>Skills</b> skills </p>
-                                            <p> <b>Interests</b> interests </p>
-                                            <p> <b>Classes</b> classes </p>
-                                        </div>                                     
+                                        <h3>Project Name</h3> <p></p>
+                                        <form method="post" action="#">
+                                            <ul class="actions">
+                                                <li><input type="submit" value="Interested" class="primary" /></li>
+                                                <li><input type="submit" value="Not Interested" /></li>
+                                            </ul>
+                                        </form>
+                                    <p></p>
                                     </div>
-                                    <!-- Calendar -->
                                     <div class="col-4 col-12-xsmall">
+                                        <img src="images/pic04.jpg" alt="profile" width="75%">
                                     </div>
                                 </div>
-
+                                <div id="userinfo">
+                                    <p> <b>Major</b> major </p>
+                                    <p> <b>Skills</b> skills </p>
+                                    <p> <b>Project Description</b> description </p>
+                                </div>     
                             </div>
                         </section>
                     </article>
