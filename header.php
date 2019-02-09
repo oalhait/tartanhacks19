@@ -28,8 +28,8 @@
 	  if(basename($_SERVER['PHP_SELF'])=="index.php"){
 	  	$titly = "Home";
 	  }
-	  if(basename($_SERVER['PHP_SELF'])=="newsfeed.php"){
-	  	$titly = "Newsfeed";
+	  if(basename($_SERVER['PHP_SELF'])=="explore.php"){
+	  	$titly = "Explore Projects";
 	  }
 	  if(basename($_SERVER['PHP_SELF'])=="profile.php"){
 	  	$titly = "My Profile";
@@ -90,32 +90,6 @@
 <body style="margin: 0; font-family: orkney; background-color: #ccc; width: 100%; height: 100%; padding: 0;">
   <div class="topnav" id="myTopnav" style="margin: 0; position: fixed; top: 0;">
     <a href="index.php?tit=Home" class="active" style="font-family: optimal; font-size: 28px; padding-left: 250px; color: white;"><img src="preston.png" height=40px width=32px style="position: absolute; top: 7px; left: 10px; border-radius: 10px;"> <div style="position: absolute; top: 14px; left: 55px;"><b>theResearchApp</b></div></a>
-    <!--
-    <a href="newsfeed.php?tit=Newsfeed" style="color: <?php
-    if(basename($_SERVER['PHP_SELF']) == 'newsfeed.php'){
-        echo 'white';
-    } else {
-        echo '#bbb';
-    } ?>;">Newsfeed</a>
-    <a href="leaderboards.php?tit=Leaderboards" style="color: <?php
-    if(basename($_SERVER['PHP_SELF']) == 'leaderboards.php'){
-        echo 'white';
-    } else {
-        echo '#bbb';
-    } ?>;">Leaderboards</a>
-    <a href="profile.php?tit=My Profile" style="color: <?php
-    if(basename($_SERVER['PHP_SELF']) == 'profile.php'){
-        echo 'white';
-    } else {
-        echo '#bbb';
-    } ?>;">Profile</a>
-    <a href="search.php?tit=Search&q=" style="color: <?php
-    if(basename($_SERVER['PHP_SELF']) == 'search.php'){
-        echo 'white';
-    } else {
-        echo '#bbb';
-    } ?>;">Search</a>
-  -->
     <a href="logout.php" style="float: right;">Logout</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>

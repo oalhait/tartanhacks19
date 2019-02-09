@@ -208,9 +208,10 @@
 
         $username = $_SESSION['username'];
         $log_in_time = date('Y-m-d H:i:s');
-        $user_logout_query = mysqli_query($con, "UPDATE users SET last_seen_datetime = '$log_in_time' WHERE username = '$username'");
+        $user_login_query = mysqli_query($con, "UPDATE users SET last_seen_datetime = '$log_in_time' WHERE username = '$username'");
+        $user_online_query = mysqli_query($con, "UPDATE users SET is_online = 'yes' WHERE username = '$username'");
 
-        header('Location: index.php?tit=Home');
+        header('Location: explore.php');
         exit;
       } else {
         $p_errors_log .= "This e-mail address and password do not match<br>";
@@ -401,6 +402,10 @@
   </div>
 <script>
 <?php
+  if(isset('preset')){
+    echo "Registering();";
+  }
+
   if(($fn_errors != "") || ($ln_errors != "") || ($u_errors != "") || ($e_errors != "") || ($p_errors != "") || ($cp_errors != "")){
     echo "Registering();";
   }
