@@ -165,9 +165,12 @@
       $username = str_replace("'", "\'", $username);
       $email = str_replace("'", "\'", $email);
 
+      $email_parts = explode("@", $email);
+      $school_domain = $email_parts[1];
+
       $confirm_code = getRandomString(255);
 
-      $add_new_user_query = "INSERT INTO users VALUES ('', '" . $username . "', '" . $hash_pass . "', '" . $f_name . "', '" . $l_name . "', '...', '...', '" . $email . "', 'new_user.png', '0', 'n/a', '" . $datetime_joined . "', '" . $datetime_joined . "', 'no', 'no', '" . $confirm_code . "')";
+      $add_new_user_query = "INSERT INTO users VALUES ('', '" . $username . "', '" . $hash_pass . "', '" . $f_name . "', '" . $l_name . "', '" . $email . "', 'new_user.png', '" . $datetime_joined . "', '" . $datetime_joined . "', 'no', '-', '" . $school_domain . "', '-', '-', '-1', '-', '-', '-', '-', '," . $f_name . "," . $l_name . ",', 'no', '" . $confirm_code . "')";
 
       $add_new_user_query = str_replace('"', '\"', $add_new_user_query);
 
@@ -367,7 +370,7 @@
           echo $_SESSION['l_name'];
         }
       ?>"><br><span><?php echo $ln_errors; ?></span>  
-    <input type="text" name="uname" placeholder="Username" value="<?php
+    <input type="text" name="uname" placeholder="Display Name" value="<?php
         if(isset($_SESSION['r_username'])){
           echo $_SESSION['r_username'];
         }

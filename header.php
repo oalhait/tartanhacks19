@@ -5,8 +5,10 @@
   if(isset($_SESSION['username'])){
     //good to go
   } else {
-    header('Location: login.php');
-    exit;
+    if(basename($_SERVER['PHP_SELF'])=="explore.php"){
+      header('Location: login.php');
+      exit;
+    }
   }
 
   $username = $_SESSION['username'];

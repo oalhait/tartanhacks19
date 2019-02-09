@@ -4,9 +4,9 @@
 
 	$timezone = date_default_timezone_set("America/New_York");
 
-	$con = mysqli_connect("localhost", "root", "", "tra_database");
+	$con = mysqli_connect("localhost", "root", "", "ctdb");
 
-	$server = "http://localhost/theResearchApp/";
+	$server = "http://128.237.193.151/tartanhacks19/";
 
   	$personnel = array("alee_master_1", "alee_master_2", "alee_editor_1", "alee_editor_2", "alee_editor_3", "alee_editor_4", "alee_editor_5", "alee_journalist_1", "alee_journalist_2");
 
