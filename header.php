@@ -34,6 +34,11 @@
     $words = str_replace("[", " ", $words);
     $words = str_replace("]", " ", $words);
     $words = str_replace("?", " ", $words);
+    $words = str_replace("!", " ", $words);
+    $words = str_replace("^", " ", $words);
+    $words = str_replace("{", " ", $words);
+    $words = str_replace("}", " ", $words);
+    $words = str_replace("|", " ", $words);
     $words = str_replace('\n', " ", $words);
     $words = str_replace("0", " ", $words);
     $words = str_replace("1", " ", $words);
@@ -149,7 +154,7 @@
     }
   </style>
   <title>
-    theResearchApp | <?php echo $titly; ?>
+    Work Well | <?php echo $titly; ?>
   </title>
   <link rel="icon" type="image/png" href="logo.png" />
   <meta name="screen" content="width=device-width">

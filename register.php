@@ -186,61 +186,17 @@
       exit;
     }
   }
-
-  if(isset($_POST['login_b'])){
-    $email = $_POST['em'];
-    $password = $_POST['pword'];
-
-    $_SESSION['email'] = $email;
-
-    //verifying password
-    $find_attempted_user = mysqli_query($con, "SELECT * FROM users WHERE email_address = '$email' AND account_confirmation = 'yes'");
-    $attempted_user = mysqli_fetch_array($find_attempted_user);
-    $num_rows = mysqli_num_rows($find_attempted_user);
-
-    if($num_rows > 0){
-      $hash_pass = md5($password);
-      if($attempted_user['hashed_password'] == $hash_pass){
-        $_SESSION['username'] = $attempted_user['username'];
-
-        //clear session variable
-        $_SESSION['email'] = "";
-
-        $username = $_SESSION['username'];
-        $log_in_time = date('Y-m-d H:i:s');
-        $user_login_query = mysqli_query($con, "UPDATE users SET last_seen_datetime = '$log_in_time' WHERE username = '$username'");
-        $user_online_query = mysqli_query($con, "UPDATE users SET is_online = 'yes' WHERE username = '$username'");
-
-        header('Location: explore.php');
-        exit;
-      } else {
-        $p_errors_log .= "This e-mail address and password do not match<br>";
-      }
-    } else {
-      $e_errors_log .= "This e-mail address is not registered with any account<br>";
-    }
-  }
 ?>
 
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>LOGIN PAGE</title>
+        <title>Work Well | Sign Up</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src="assets/js/main.js"></script>
-
-        <style>
-            hidden {
-              display: none;
-            }
-
-            showy {
-              display: block;
-            }
-        </style>
     </head>
     <body class="landing is-preload">
 
@@ -250,7 +206,6 @@
                 <!-- Header -->
                     <header id="header" class="alt">
                         <h1><a href="index.php">WORK WELL</a></h1>
-                        
                     </header>
 
                 <!-- Banner -->
@@ -260,6 +215,30 @@
                             <section>
                                 <div id="loginBoxes">
                                     <form method="post">
+                                        <div class="row gtr-uniform">
+                                            <div class="col-2 col-0-xsmall"></div>
+                                            <div class="col-8 col-12-xsmall">
+                                                <input type="text" name="f_name" id="first_name" placeholder="First Name" />
+                                            </div>
+                                            <p></p>
+                                            <div class="col-2 col-0-xsmall"></div>
+                                        </div>
+                                        <div class="row gtr-uniform">
+                                            <div class="col-2 col-0-xsmall"></div>
+                                            <div class="col-8 col-12-xsmall">
+                                                <input type="text" name="l_name" id="last_name" placeholder="Last Name" />
+                                            </div>
+                                            <p></p>
+                                            <div class="col-2 col-0-xsmall"></div>
+                                        </div>
+                                        <div class="row gtr-uniform">
+                                            <div class="col-2 col-0-xsmall"></div>
+                                            <div class="col-8 col-12-xsmall">
+                                                <input type="text" name="uname" id="username" placeholder="Display Name" />
+                                            </div>
+                                            <p></p>
+                                            <div class="col-2 col-0-xsmall"></div>
+                                        </div>
                                         <div class="row gtr-uniform">
                                             <div class="col-2 col-0-xsmall"></div>
                                             <div class="col-8 col-12-xsmall">
@@ -275,11 +254,18 @@
                                             </div>
                                             <div class="col-2 col-0-xsmall"></div>
                                         </div>
+                                        <div class="row gtr-uniform">
+                                            <div class="col-2 col-0-xsmall"></div>
+                                            <div class="col-8 col-12-xsmall">
+                                                <input type="password" name="pword2" id="password2" placeholder="Confirm Password" />
+                                            </div>
+                                            <div class="col-2 col-0-xsmall"></div>
+                                        </div>
                                     
                                         <p></p>
                                         <ul class="actions special">
-                                            <input name="login_b" class="button fit primary" type="submit" value="Log In">
-                                            <li><a href="#" class="button fit" onclick = "Registering()">I'm New!</a></li>
+                                            <input name="register_b" class="button fit primary" type="submit" value="Sign Up">
+                                            <li><a href="index.php" class="button fit">Back</a></li>
                                          </ul>
                                     </form>
                                 </div>
@@ -297,7 +283,6 @@
                             <li>&copy; Emily deGrandpré, Ifeanyi Ene, Maya Pandurangan, Omar Alhait </li>
                         </ul>
                     </footer>
-
             </div>
 
         <!-- Scripts -->
@@ -308,44 +293,6 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-
-            <script>
-            <?php
-              if(isset($_GET['preset'])){
-                echo "Registering();";
-              }
-
-              if(($fn_errors != "") || ($ln_errors != "") || ($u_errors != "") || ($e_errors != "") || ($p_errors != "") || ($cp_errors != "")){
-                echo "Registering();";
-              }
-
-              if(($e_errors_log != "") || ($p_errors_log != "")){
-                echo "LoggingIn();";
-              }
-            ?>
-
-            function LoggingIn() {
-                var x = document.getElementsByTagName("showy");
-                var y = document.getElementsByTagName("hidden");
-                for(var i=0; i<x.length; i++) {
-                    x[i].style.display = "block";
-                }
-                for(var j=0; j<y.length; j++) {
-                    y[j].style.display = "none";
-                }
-            }
-
-            function Registering() {
-                var y = document.getElementsByTagName("showy");
-                var x = document.getElementsByTagName("hidden");
-                for(var i=0; i<x.length; i++) {
-                    x[i].style.display = "block";
-                }
-                for(var j=0; j<y.length; j++) {
-                    y[j].style.display = "none";
-                }
-            }
-            </script>
 
     </body>
 </html>
