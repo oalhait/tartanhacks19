@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Manage Project - Work Well by HTML5 UP</title>
+        <title>Add Project - Work Well by HTML5 UP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -40,31 +40,19 @@
                     <article id="main">
                         <section class="wrapper style5">
                             <div class="inner">
-                                <div class="row">
-                                    <div class="col-6 col-12-medium" id="profiles">
-                                        <h3>Matched Profiles</h3>
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                    </div>
-                                    <div class="col-6 col-12-medium" id="projectsummary">
-                                        <h3>My Project</h3>
-                                        <p> <b>Project Summary</b> major </p>
-                                        <p> <b>Skills Santed</b> skills </p>
-                                        <p> <b>Times Available</b> interests</p>
-                                        <p> <b>To-Do</b> major </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-8 col-12-medium"></div>
-
-                                    <div class="col-4 col-12-medium">
-                                        <ul class="actions">
-                                            <li><a href="addProject.html"" class="button primary">Add Project</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <h2>Add Project</h2>
+                                <!-- include php -->
+                                <form method="post" action="#">
+                                    <input type="text" name="project-name" id="project-name" value="" placeholder="Project Name" />
+                                    <p></p>
+                                    <input type="text" name="project-skills" id="project-skills" value="" placeholder="Skills Necessary" />
+                                    <p></p>
+                                    <textarea name="projectdescription" id="projectdescription" placeholder="Enter your message" rows="6"></textarea>
+                                    <p></p>
+                                    <ul class="actions special">
+                                        <input class="button fit primary" type="submit" value="Submit Project">
+                                    </ul>
+                                </form>
                             </div>
                         </section>
                     </article>
