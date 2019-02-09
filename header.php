@@ -154,9 +154,9 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-<body class="is-preload" style="margin: 0; font-family: orkney; background-color: #ccc; width: 100%; height: 100%; padding: 0;">
-  <div class="topnav" id="myTopnav" style="margin: 0; position: fixed; top: 0;">
-    <a href="index.php?tit=Home" class="active" style="font-family: optimal; font-size: 28px; padding-left: 250px; color: white;"><img src="preston.png" height=40px width=32px style="position: absolute; top: 7px; left: 10px; border-radius: 10px;"> <div style="position: absolute; top: 14px; left: 55px;"><b>theResearchApp</b></div></a>
+<body class="is-preload" style="margin: 0; background-color: #ccc; width: 100%; height: 100%; padding: 0;">
+  <div class="topnav" id="myTopnav" style="margin: 0; position: fixed; top: 0; background-color: #2e3842; width: 100%; height: 55px">
+    <a href="index.php" class="active" style="font-size: 28px; padding-left: 250px; color: white;"><img src="logo.png" height=40px width=40px style="position: absolute; top: 7px; left: 10px; border-radius: 10px;"> <div style="position: absolute; top: 14px; left: 55px;"><b>WORK WELL</b></div></a>
     <a href="logout.php" style="float: right;">Logout</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
