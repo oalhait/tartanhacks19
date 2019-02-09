@@ -1,4 +1,7 @@
-
+hi 👋🏼
+this is our hackathon project for tartanhacks 2019! lit! 
+also w/ Emily deGrandpre, Maya Pandurangan, Ifeanyi Ene
+gang
 
 
 Credits:
