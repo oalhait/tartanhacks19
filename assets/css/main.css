@@ -163,7 +163,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
+		color: #2e3842;
 		font-weight: 800;
 		letter-spacing: 0.225em;
 		line-height: 1em;
@@ -1843,7 +1843,6 @@ input, select, textarea {
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 100%;
 	}
 
 		input[type="text"]:invalid,
@@ -3330,7 +3329,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #FFFFFF;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3417,6 +3416,45 @@ input, select, textarea {
 		transform: translateX(0);
 	}
 
+
+/* gallery menu */
+
+	.icon-bar {
+	  width: 100%; /* Full-width */
+	  background-color: #FFF; 
+	  overflow: auto; /* Overflow due to float */
+	}
+	
+	.icon-bar a {
+	  float: right; /* Float links side by side */
+	  text-align: center; /* Center-align text */
+	  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+	  padding: 1px 8px; /* Some top and bottom padding */
+	  transition: all 0.3s ease; /* Add transition for hover effects */
+	  color: #ef5e4a; /* White text color */
+	  font-size: 20px; /* Increased font size */
+	}
+	
+	.icon-bar a:hover {
+	  background-color: #FFF; /* Add a hover color */
+	}
+	
+	.active {
+	  background-color: #2e3842; /* Add an active/current color */
+	}
+
+
+/* Style the search box inside the navigation bar */
+	.topSearch {
+	  width: 33%; 
+	  float: right;
+	  padding: 6px;
+	  margin-top: 10px;
+	  font-size: 10px;
+	  text-align: center;
+	}
+
+
 /* Header */
 
 	#header {
@@ -3424,7 +3462,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
-		background: #2e3842;
+		background: #FFF;
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -3462,6 +3500,7 @@ input, select, textarea {
 				}
 
 		#header nav {
+			width: 80vw;
 			height: inherit;
 			line-height: inherit;
 			position: absolute;
@@ -3483,14 +3522,14 @@ input, select, textarea {
 
 					#header nav > ul > li > a {
 						border: 0;
-						color: #fff;
+						color: #000;
 						display: block;
 						font-size: 0.8em;
 						letter-spacing: 0.225em;
 						padding: 0 1.5em;
 						text-transform: uppercase;
 					}
-
+						/*
 						#header nav > ul > li > a.menuToggle {
 							outline: 0;
 							position: relative;
@@ -3517,7 +3556,8 @@ input, select, textarea {
 										display: none;
 									}
 
-							}
+							} */
+
 
 						@media screen and (max-width: 736px) {
 
@@ -3865,7 +3905,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 6em 0 4em 0 ;
-		background-color: #1d242a;
+		background-color: #ef5e4a;
 		text-align: center;
 	}
 
@@ -3882,7 +3922,7 @@ input, select, textarea {
 				}
 
 		#footer .copyright {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255);
 			font-size: 0.8em;
 			letter-spacing: 0.225em;
 			list-style: none;
@@ -3909,7 +3949,7 @@ input, select, textarea {
 				}
 
 					#footer .copyright li a:hover {
-						color: #fff;
+						color: #2e3843;
 					}
 
 				@media screen and (max-width: 480px) {
@@ -3976,73 +4016,3 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
-
-/* Navbar container */css
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px; 
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
