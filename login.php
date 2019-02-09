@@ -402,7 +402,7 @@
   </div>
 <script>
 <?php
-  if(isset('preset')){
+  if(isset($_GET['preset'])){
     echo "Registering();";
   }
 
