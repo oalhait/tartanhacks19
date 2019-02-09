@@ -12,8 +12,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" type="image/png" href ="logo.png" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-
 	</head>
 	<body class="landing is-preload">
 
@@ -28,7 +26,7 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Work Well</h2>
+							<h2 style="color: white">Work Well</h2>
 							<p>A place to find collaborators<br />
 							for your side projects<br />
 							crafted @ Tartan Hacks 2019 </p>

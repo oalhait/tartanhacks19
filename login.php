@@ -75,6 +75,7 @@
         <title>Work Well | Login</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" type="image/png" href ="logo.png" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src="assets/js/main.js"></script>
@@ -92,7 +93,7 @@
                 <!-- Banner -->
                     <section id="banner">
                         <div class="inner">
-                            <h2>Work Well</h2>
+                            <h2 style="color: white">Work Well</h2>
                             <section>
                                 <div id="loginBoxes">
                                     <form method="post">

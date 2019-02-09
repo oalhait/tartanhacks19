@@ -5,10 +5,8 @@
   if(isset($_SESSION['username'])){
     //good to go
   } else {
-    if(basename($_SERVER['PHP_SELF'])=="explore.php"){
-      header('Location: login.php');
-      exit;
-    }
+    header('Location: index.php');
+    exit;
   }
 
   function generate_tags($words) {
@@ -105,7 +103,7 @@
 	  	$titly = "Explore Projects";
 	  }
 	  if(basename($_SERVER['PHP_SELF'])=="profile.php"){
-	  	$titly = "My Profile";
+	  	$titly = "Profile";
 	  }
 	  if(basename($_SERVER['PHP_SELF'])=="search.php"){
 	  	$titly = "Search";
@@ -146,21 +144,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel = "stylesheet" type = "text/css" href = "style.css" />
-  <style>
-    @font-face {
-      font-family: optimal;
-      src: url(avnext.otf); /* Safari, Android, iOS */
-    }
-  </style>
   <title>
     Work Well | <?php echo $titly; ?>
   </title>
-  <link rel="icon" type="image/png" href="logo.png" />
-  <meta name="screen" content="width=device-width">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href ="logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-<body style="margin: 0; font-family: orkney; background-color: #ccc; width: 100%; height: 100%; padding: 0;">
+<body class="is-preload" style="margin: 0; font-family: orkney; background-color: #ccc; width: 100%; height: 100%; padding: 0;">
   <div class="topnav" id="myTopnav" style="margin: 0; position: fixed; top: 0;">
     <a href="index.php?tit=Home" class="active" style="font-family: optimal; font-size: 28px; padding-left: 250px; color: white;"><img src="preston.png" height=40px width=32px style="position: absolute; top: 7px; left: 10px; border-radius: 10px;"> <div style="position: absolute; top: 14px; left: 55px;"><b>theResearchApp</b></div></a>
     <a href="logout.php" style="float: right;">Logout</a>

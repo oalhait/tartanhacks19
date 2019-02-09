@@ -175,7 +175,7 @@
 
       $confirm_code = getRandomString(255);
 
-      $add_new_user_query = "INSERT INTO users VALUES ('', '" . $username . "', '" . $hash_pass . "', '" . $f_name . "', '" . $l_name . "', '" . $email . "', 'new_user.png', '" . $datetime_joined . "', '" . $datetime_joined . "', 'no', '-', '" . $school_domain . "', '-', '-', '-1', '-', '-', '-', '-', '," . $f_name . "," . $l_name . ",', 'no', '" . $confirm_code . "')";
+      $add_new_user_query = "INSERT INTO users VALUES ('', '" . $username . "', '" . $hash_pass . "', '" . $f_name . "', '" . $l_name . "', '" . $email . "', 'new_user.jpg', '" . $datetime_joined . "', '" . $datetime_joined . "', 'no', '-', '" . $school_domain . "', '-', '-', '-1', '-', '-', '-', '-', '," . $f_name . "," . $l_name . ",', 'no', '" . $confirm_code . "')";
 
       $add_new_user_query = str_replace('"', '\"', $add_new_user_query);
 
@@ -199,6 +199,7 @@
         <title>Work Well | Sign Up</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" type="image/png" href ="logo.png" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <script src="assets/js/main.js"></script>
@@ -216,7 +217,7 @@
                 <!-- Banner -->
                     <section id="banner">
                         <div class="inner">
-                            <h2>Work Well</h2>
+                            <h2 style="color: white">Work Well</h2>
                             <section>
                                 <div id="loginBoxes">
                                     <form method="post">
