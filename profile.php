@@ -54,22 +54,22 @@
                                         </p>
                                             <p> <b>Skills</b> &bull; <?php echo $profile_array['skills']; ?> 
                                             <?php if($prof_id == $user_array['id']){
-                                                echo "<b><a href='' style='text-decoration: none'>Edit Skills</a></b>";
+                                                echo "<b><a href='enter_value_textarea.php?id=" . $user_array['id'] . "&pbn=profile&table=users&column=skills' style='text-decoration: none'>Edit Skills</a></b>";
                                             } ?>
                                         </p>
                                             <p> <b>Interests</b> &bull; <?php echo $profile_array['interests']; ?> 
                                             <?php if($prof_id == $user_array['id']){
-                                                echo "<b><a href='' style='text-decoration: none'>Edit Interests</a></b>";
+                                                echo "<b><a href='enter_value_textbox.php?id=" . $user_array['id'] . "&pbn=profile&table=users&column=interests'  style='text-decoration: none'>Edit Interests</a></b>";
                                             } ?>
                                         </p>
                                             <p> <b>Student Organizations</b> &bull; <?php echo $profile_array['orgs']; ?> 
                                             <?php if($prof_id == $user_array['id']){
-                                                echo "<b><a href='' style='text-decoration: none'>Edit Student Organizations</a></b>";
+                                                echo "<b><a href='enter_value_textbox.php?id=" . $user_array['id'] . "&pbn=profile&table=users&column=orgs'  style='text-decoration: none'>Edit Student Organizations</a></b>";
                                             } ?>
                                         </p>
                                             <p> <b>Weekly Free Times</b> &bull; <?php echo $profile_array['free_times']; ?> 
                                             <?php if($prof_id == $user_array['id']){
-                                                echo "<b><a href='' style='text-decoration: none'>Edit Weekly Free Times</a></b>";
+                                                echo "<b><a href='enter_value_textbox.php?id=" . $user_array['id'] . "&pbn=profile&table=users&column=free_times'  style='text-decoration: none'>Edit Weekly Free Times</a></b>";
                                             } ?>
                                         </p>
                                         </div>                                     
