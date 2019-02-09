@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Manage Project - Work Well by HTML5 UP</title>
+        <title>Add Project - Work Well by HTML5 UP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -40,21 +40,19 @@
                     <article id="main">
                         <section class="wrapper style5">
                             <div class="inner">
-                                <div class="row">
-                                    <div class="col-6 col-12-medium" id="profiles">
-                                        <h3>Matched Profiles</h3>
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                            <img src="images/pic04.jpg" alt="profile" width="45%">
-                                    </div>
-                                    <div class="col-6 col-12-medium" id="projectsummary">
-                                        <h3>Project Summary</h3>
-                                            <p> <b>project summary</b> major </p>
-                                            <p> <b>skills wanted</b> skills </p>
-                                            <p> <b>times wanted</b> interests </p>
-                                    </div>
-                                </div>
+                                <h2>Add Project</h2>
+                                <!-- include php -->
+                                <form method="post" action="#">
+                                    <input type="text" name="project-name" id="project-name" value="" placeholder="Project Name" />
+                                    <p></p>
+                                    <input type="text" name="project-skills" id="project-skills" value="" placeholder="Skills Necessary" />
+                                    <p></p>
+                                    <textarea name="projectdescription" id="projectdescription" placeholder="Enter your message" rows="6"></textarea>
+                                    <p></p>
+                                    <ul class="actions special">
+                                        <input class="button fit primary" type="submit" value="Submit Project">
+                                    </ul>
+                                </form>
                             </div>
                         </section>
                     </article>
